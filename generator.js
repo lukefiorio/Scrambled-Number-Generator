@@ -1,8 +1,10 @@
 module.exports = function(n) {
   let scrambledArr = [];
+  let randomInt;
   for (let i = 0; i < n; i++) {
     // probably not "truly" random, but certainly scrambled
-    scrambledArr.splice(Math.floor(Math.random() * i), 0, i);
+    randomInt = Math.floor(Math.random() * i);
+    scrambledArr.splice(randomInt, 0, i);
   }
   return scrambledArr;
 };
